@@ -177,7 +177,7 @@ esac
 
 chmod +rx start_nightscout.sh
 
-git clone https://jcorbett80/cgm-remote-monitor.git
+git clone https://raw.githubusercontent.com/jcorbett80/cgm-remote-monitor.git
 
 # switching to cgm-remote-monitor directory
 cd cgm-remote-monitor/
@@ -209,9 +209,8 @@ esac
 
 # Setup basis oref0 stuff
 # https://openaps.readthedocs.io/en/master/docs/walkthrough/phase-2/oref0-setup.html
-curl -s https://raw.githubusercontent.com/openaps/docs/master/scripts/quick-packages.sh | bash -
+curl -s https://raw.githubusercontent.com/openaps/oref0/dev/bin/openaps-install.sh > /tmp/openaps-install.sh && sudo bash /tmp/openaps-install.sh
 
-mkdir -p ~/src; cd ~/src && git clone -b dev git://github.com/openaps/oref0.git || (cd oref0 && git checkout dev && git pull)
 
 echo "Please continue with step 2 of https://openaps.readthedocs.io/en/master/docs/walkthrough/phase-2/oref0-setup.html"
 echo "cd && ~/src/oref0/bin/oref0-setup.sh"
