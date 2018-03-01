@@ -5,7 +5,7 @@
 ## TODO: set /etc/domainname
 
 # make me current
-sudo apt-get update && sudo apt-get upgrade -y
+# sudo apt-get update && sudo apt-get upgrade -y
 
 # parse command line options
 for i in "$@"
@@ -35,10 +35,12 @@ esac
 done
 
 if ! [[ ${INSTALL_MONGO,,} =~ "yes" || ${INSTALL_MONGO,,} =~ "no"  ]]; then
-    echo ""
-    echo "Unsupported value for --mongo. Choose either 'yes' or 'no'. "
+    echo "Choose either 'yes' or 'no'. "
     echo
-    INSTALL_MONGO="" # to force a Usage prompt
+    INSTALL_MONGO="" # to force a Usage prompt    
+    echo ""
+    
+    
 fi
 
 if ! [[ ${UNITS,,} =~ "mmol" || ${UNITS,,} =~ "mg" ]]; then
