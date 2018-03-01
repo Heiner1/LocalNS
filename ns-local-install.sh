@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## from https://raw.githubusercontent.com/SandraK82/deploy-ns-local-raspi/master/ns-local-install.sh
+## from https://raw.githubusercontent.com/jcorbett80/LocalNS/master/ns-local-install.sh
 
 ## TODO: set /etc/domainname
 
@@ -119,33 +119,33 @@ if [[ -z "$INSTALL_MONGO" || -z "$UNITS" || -z "$STORAGE" || -z "$INSTALL_OREF0"
 fi
 
 # get the right node
-CPU_MODEL=$( awk '/model name/ {print $4}' < /proc/cpuinfo )
-if [ "$CPU_MODEL" = "ARMv6-compatible" ]
-then
-  echo "ARMv6 detected"
+ # CPU_MODEL=$( awk '/model name/ {print $4}' < /proc/cpuinfo )
+# if [ "$CPU_MODEL" = "ARMv6-compatible" ]
+# then
+  # echo "ARMv6 detected"
   # install node (on ARMv6 eg. Raspberry Model A/B/B+/A+/Zero)
-  wget https://nodejs.org/dist/v6.7.0/node-v6.7.0-linux-armv6l.tar.xz
-  tar -xvf node-v6.7.0-linux-armv6l.tar.xz
-  cd node-v6.7.0-linux-armv6l
-  sudo cp -R * /usr/local/
+  # wget https://nodejs.org/dist/v6.7.0/node-v6.7.0-linux-armv6l.tar.xz
+  # tar -xvf node-v6.7.0-linux-armv6l.tar.xz
+  # cd node-v6.7.0-linux-armv6l
+  # sudo cp -R * /usr/local/
   # check version should be v6.7.0
-  node -v
-  cd ..
+  # node -v
+  # cd ..
   # clean up
-  rm node-v6.7.0-linux-armv6l.tar.xz
-  rm -r node-v6.7.0-linux-armv6l
-else
-  echo "Assuming ARMv8 (Raspi 3))"
+  # rm node-v6.7.0-linux-armv6l.tar.xz
+  # rm -r node-v6.7.0-linux-armv6l
+# else
+  # echo "Assuming ARMv8 (Raspi 3))"
   # install node (on ARMv8 eg Raspberry 3 Model B)
-  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-  sudo apt-get install -y nodejs
-fi
+  # curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  # sudo apt-get install -y nodejs
+# fi
 
 # install dependencies 
 # get git, mongodb 2.x from apt for now,and npm
 # optional extra packages to easily debug stuff or to do better maintenance
-EXTRAS="etckeeper tcsh lsof"
-sudo apt-get install --assume-yes git npm $EXTRAS
+# EXTRAS="etckeeper tcsh lsof"
+# sudo apt-get install --assume-yes git npm $EXTRAS
 
 if [[ ${INSTALL_MONGO,,} =~ "yes" || ${INSTALL_MONGO,,} =~ "y"  ]]; then
 	sudo apt-get install --assume-yes git mongodb-server
@@ -157,12 +157,12 @@ if [[ ${INSTALL_MONGO,,} =~ "yes" || ${INSTALL_MONGO,,} =~ "y"  ]]; then
 	#cat /var/log/mongodb/mongodb.log -> should contain: [initandlisten] waiting for connections on port 27017
 fi
 
-sudo npm cache clean -f
-sudo npm install npm -g
-sudo npm install n -g
+# sudo npm cache clean -f
+# sudo npm install npm -g
+# sudo npm install n -g
 
 # select matching node
-sudo n 4.6
+# sudo n 8.9
 
 # go home
 cd
