@@ -45,7 +45,7 @@ __Usage:__
 
  1. open console on your raspi eg `ssh pi@192.168.10.4` default-password `raspberry` and run ns-local-install script for an interactive install:
     ```
-    curl -s https://raw.githubusercontent.com/SandraK82/deploy-ns-local-raspi/master/ns-local-install.sh | bash -
+    curl -s https://raw.githubusercontent.com/jcorbett80/LocalNS/master/ns-local-install.sh | bash -
 	```
 	
 	relax and drink some :coffee: - script runtime *over 1.5 hour* on clean and fresh raspi 1 or 2, and about 30 minutes on a raspi 3.
@@ -54,7 +54,7 @@ __Usage:__
 	```
 	mkdir src 
     cd src
-    git clone https://github.com/SandraK82/deploy-ns-local-raspi.git
+    git clone https://github.com/jcorbett80/LocalNS.git
 	cd deploy-ns-local-raspi
 	```
 	You can then use 
@@ -75,7 +75,7 @@ __Usage:__
     Put your personal password (at least 12 characters long) and the name of your site (just for display) there!
  
  3. once finished, restart nightscout with: `sudo /etc/init.d/nightscout stop && sudo /etc/init.d/nightscout start`
- 4. navigate to http://192.168.10.4:1337/ complete nightscout profile settings
+ 4. navigate to http://10.0.0.198/ complete nightscout profile settings
  5. Have fun :smiley:
 
 __Troubleshooting:__
