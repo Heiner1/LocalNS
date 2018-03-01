@@ -3,7 +3,7 @@ cd /home/pi/cgm-remote-monitor
 
 # See https://github.com/nightscout/cgm-remote-monitor#environment for a description of the fields
 # Required by Nightscout, please edit
-export CUSTOM_TITLE="james nightscout"
+export CUSTOM_TITLE="jamesnightscout"
 export API_SECRET=thisiswonderful
 
 # 
