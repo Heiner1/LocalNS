@@ -177,7 +177,7 @@ esac
 
 chmod +rx start_nightscout.sh
 
-git clone https://jcorbett80/LocalNS/cgm-remote-monitor.git
+git clone https://jcorbett80/cgm-remote-monitor.git
 
 # switching to cgm-remote-monitor directory
 cd cgm-remote-monitor/
