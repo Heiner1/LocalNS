@@ -55,7 +55,7 @@ __Usage:__
 	mkdir src 
     cd src
     git clone https://github.com/jcorbett80/LocalNS.git
-	cd LocalNS-raspi
+	cd LocalNS
 	```
 	You can then use 
 	```
