@@ -169,8 +169,8 @@ cd
 
 # get start script
 case $UNITS in
-   mmol) curl -o start_nightscout.sh https://raw.githubusercontent.com/SandraK82/deploy-ns-local-raspi/master/start_nightscout.sh; break;;
-   mg) curl -o start_nightscout.sh https://raw.githubusercontent.com/SandraK82/deploy-ns-local-raspi/master/start_nightscout-mg.sh; break;;
+   mmol) curl -o start_nightscout.sh https://raw.githubusercontent.com/jcorbett80/LocalNS/master/start_nightscout.sh; break;;
+   mg) curl -o start_nightscout.sh https://raw.githubusercontent.com/jcorbett80/LocalNS/master/start_nightscout-mg.sh; break;;
 esac
 
 chmod +rx start_nightscout.sh
@@ -189,7 +189,7 @@ git checkout dev
 
 # make autoboot
 cd
-curl -o nightscout https://raw.githubusercontent.com/SandraK82/deploy-ns-local-raspi/master/nightscout
+curl -o nightscout https://raw.githubusercontent.com/jcorbett80/LocalNS/master/nightscout
 sudo mv nightscout /etc/init.d/nightscout
 sudo chmod +x /etc/init.d/nightscout
 sudo /etc/init.d/nightscout start
