@@ -55,15 +55,15 @@ __Usage:__
 	mkdir src 
     cd src
     git clone https://github.com/jcorbett80/LocalNS.git
-	cd deploy-ns-local-raspi
+	cd LocalNS-raspi
 	```
 	You can then use 
 	```
-	bash ns-local-install.sh [--mongo=[yes|no]] [--units=[mmol|mg]] [--storage=[openaps|mongodb]] [--oref0=[yes|no]] [--units=[mmol|mg]]
+	bash ns-local-install.sh [--mongo=yhes] [--units=mg] [--storage=mongodb] [--oref0=yes] [--units=mg]
 	```
 	For example: 
 	```
-	bash ns-local-install.sh --mongo=yes --units=mmol --storage=mongo --oref0=yes
+	bash ns-local-install.sh --mongo=yes --units=mg --storage=mongo --oref0=yes
 	```
 	
  2. after running the script you will have a running nightscout local installation. Now open editor with your config for nightscout.
