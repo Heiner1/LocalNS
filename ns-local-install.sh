@@ -5,7 +5,7 @@
 ## TODO: set /etc/domainname
 
 # make me current
-# sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 # parse command line options
 for i in "$@"
@@ -177,7 +177,7 @@ esac
 
 chmod +rx start_nightscout.sh
 
-git clone https://github.com/nightscout/cgm-remote-monitor.git
+git clone https://jcorbett80/LocalNS/cgm-remote-monitor.git
 
 # switching to cgm-remote-monitor directory
 cd cgm-remote-monitor/
