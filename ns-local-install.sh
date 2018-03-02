@@ -175,7 +175,7 @@ case $UNITS in
    mg) curl -o start_nightscout.sh https://raw.githubusercontent.com/jcorbett80/LocalNS/master/start_nightscout-mg.sh; break;;
 esac
 
-chmod +rx start_nightscout.sh
+sudo chmod +rx start_nightscout.sh
 
 git clone https://github.com/jcorbett80/cgm-remote-monitor.git
 
@@ -190,8 +190,8 @@ git checkout dev
 
 # install node
 cd
-chmod +rx runasroot.sh
-chmod +rx installnodejsnpm.sh
+sudo chmod +rx runasroot.sh
+sudo chmod +rx installnodejsnpm.sh
 runasroot.sh
 
 su pi
