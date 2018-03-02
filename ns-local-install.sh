@@ -190,8 +190,7 @@ git checkout dev
 
 # install node
 cd
-sudo chmod +rx runasroot.sh
-sudo chmod +rx installnodejsnpm.sh
+
 runasroot.sh
 
 su pi
