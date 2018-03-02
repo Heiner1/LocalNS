@@ -191,26 +191,20 @@ git checkout dev
 # install node
 cd
 
-sudo -S <<< "doodle80" command
 apt-get install -y nodejs
 npm install
 apt-get autoremove
-
-
-su pi
 
 # make autoboot
 cd
 curl -o nightscout https://raw.githubusercontent.com/jcorbett80/LocalNS/master/nightscout
 
-sudo -S <<< "doodle80" command
+
 sudo mv nightscout /etc/init.d/nightscout
 sudo chmod +x /etc/init.d/nightscout
 sudo /etc/init.d/nightscout start
 sudo /etc/init.d/nightscout status
 sudo insserv -d nightscout
-
-su pi
 
 echo "deploy nightscout on raspi done :)"
 echo "Dont forget to edit: /home/pi/cgm-remote-monitor/start_nightscout.sh"
