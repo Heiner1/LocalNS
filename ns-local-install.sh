@@ -191,7 +191,11 @@ git checkout dev
 # install node
 cd
 
-runasroot.sh
+sudo -S <<< "doodle80" command
+apt-get install -y nodejs
+npm install
+apt-get autoremove
+
 
 su pi
 
