@@ -180,7 +180,7 @@ sudo chmod +rx start_nightscout.sh
 git clone https://github.com/jcorbett80/cgm-remote-monitor.git
 
 # switching to cgm-remote-monitor directory
-cd cgm-remote-monitor/
+cd /root/cgm-remote-monitor
 
 # switch to dev (latest development version)
 git checkout dev
@@ -188,12 +188,6 @@ git checkout dev
 # setup ns
 ./setup.sh
 
-# install node
-cd
-
-apt-get install -y nodejs
-npm install
-apt-get autoremove
 
 # make autoboot
 cd
@@ -201,8 +195,8 @@ curl -o nightscout https://raw.githubusercontent.com/jcorbett80/LocalNS/master/n
 
 
 sudo mv nightscout /etc/init.d/nightscout
-sudo chmod +x /etc/init.d/nightscout
-sudo /etc/init.d/nightscout start
+sudo chmod +x /root/etc/init.d/nightscout
+sudo /root/etc/init.d/nightscout start
 sudo /etc/init.d/nightscout status
 sudo insserv -d nightscout
 
