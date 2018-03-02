@@ -193,10 +193,9 @@ git checkout dev
 cd
 curl -o nightscout https://raw.githubusercontent.com/jcorbett80/LocalNS/master/nightscout
 
-
 sudo mv nightscout /etc/init.d/nightscout
-sudo chmod +x /root/etc/init.d/nightscout
-sudo /root/etc/init.d/nightscout start
+sudo chmod +x /etc/init.d/nightscout
+sudo /etc/init.d/nightscout start
 sudo /etc/init.d/nightscout status
 sudo insserv -d nightscout
 
