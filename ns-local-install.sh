@@ -179,10 +179,6 @@ chmod +rx start_nightscout.sh
 
 git clone https://github.com/jcorbett80/cgm-remote-monitor.git
 
-# leave root
-
-su pi
-
 # switching to cgm-remote-monitor directory
 cd cgm-remote-monitor/
 
@@ -192,6 +188,11 @@ git checkout dev
 # setup ns
 ./setup.sh
 
+# install node
+cd
+runasroot.sh
+
+su pi
 
 # make autoboot
 cd
