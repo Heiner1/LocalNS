@@ -190,6 +190,8 @@ git checkout dev
 
 # install node
 cd
+chmod +rx runasroot.sh
+chmod +rx installnodejsnpm.sh
 runasroot.sh
 
 su pi
@@ -213,9 +215,9 @@ case $OREF0 in
 esac
 
 # Setup basis oref0 stuff
-sudo su
+
 # https://openaps.readthedocs.io/en/master/docs/walkthrough/phase-2/oref0-setup.html
-curl -s https://raw.githubusercontent.com/openaps/oref0/dev/bin/openaps-install.sh > /tmp/openaps-install.sh && sudo bash /tmp/openaps-install.sh
+echo "Please log into root and continue with oref0 setup using curl -s https://raw.githubusercontent.com/openaps/oref0/dev/bin/openaps-install.sh > /tmp/openaps-install.sh && sudo bash /tmp/openaps-install.sh"
 
 
 echo "Please continue with step 2 of https://openaps.readthedocs.io/en/master/docs/walkthrough/phase-2/oref0-setup.html"
