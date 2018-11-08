@@ -9,10 +9,7 @@ __Tested with:__
 
 __Prerequisites__
 
-0. Install Raspberry Pi SD kart with Rasbian. Download Raspbian at https://www.raspberrypi.org/downloads/raspbian/
-	You can you choose to use:
-	- Rasbian Jessie with PIXEL: This has a graphical user interface, called PIXEL desktop
-	- Raspbian Jessie Lite: A minimal image based on Debian Jessie. No desktop included.
+0. Notebook
 
 1. ???
 
@@ -32,7 +29,7 @@ A4. SSH ==> Enable SSH for remote access
 
 __Usage:__
 
- 1. open console on your notebook eg `ssh pi@192.168.10.4` default-password `??????` and run ns-local-install script for an interactive install:
+ 1. open console on your notebook eg `ssh user@localadress` default-password `??????` and run ns-local-install script for an interactive install:
     ```
     curl -s https://raw.githubusercontent.com/Heiner1/LocalNS/master/ns-local-install.sh | bash -
 	```
@@ -56,7 +53,7 @@ __Usage:__
 	```
 	
  2. after running the script you will have a running nightscout local installation. Now open editor with your config for nightscout.
-    `nano /home/pi/cgm-remote-monitor/start-nightscout.sh`
+    `nano /home/USER/cgm-remote-monitor/start-nightscout.sh`
      You need to configure at least the lines at the top of the file:
     `CUSTOM_TITLE=mysitename_without_spaces`
     `API_SECRET=my_12_characters_or_more_password``
@@ -69,7 +66,7 @@ __Usage:__
 
 __Troubleshooting:__
 
- * nodejs manual start: user@machine:~/cgm-remote-monitor $ start-nightscout.sh` (must be in cgm-remote-monitor directory)
+ * nodejs manual start: USER@machine:~/cgm-remote-monitor $ start-nightscout.sh` (must be in cgm-remote-monitor directory)
  * nodejs / nightscout log: check `cat /var/log/openaps/nightscout.log` 
  * mongodb check `cat /var/log/mongodb/mongodb.log` should contain: `[initandlisten] waiting for connections on port 27017`
 
@@ -97,7 +94,7 @@ __With help from:__
 - contributions from PieterGit
 
 __Whishlist/To Do:__
-- seperate username/password for Mongo
+- seperate Username/password for Mongo
 - Nginx to use for https / letsencrypt certificate
 - Script to create wifi hotspot on the raspberry pi
 - Always install latest Node (now 6.8.0 instead of 6.7.0 what is being installed)
