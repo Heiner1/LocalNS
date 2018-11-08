@@ -29,7 +29,7 @@ A4. SSH ==> Enable SSH for remote access
 
 __Usage:__
 
- 1. open console on your notebook eg `ssh user@localadress` default-password `??????` and run ns-local-install script for an interactive install:
+ 1. if you want to install it on a raspi: open console on your notebook eg `ssh user@localadress` default-password `??????` and run ns-local-install script for an interactive install:
     ```
     curl -s https://raw.githubusercontent.com/Heiner1/LocalNS/master/ns-local-install.sh | bash -
 	```
