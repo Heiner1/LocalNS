@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## from https://raw.githubusercontent.com/jcorbett80/LocalNS/master/ns-local-install.sh
+## from https://raw.githubusercontent.com/Heiner1/LocalNS/master/ns-local-install.sh
 
 ## TODO: set /etc/domainname
 
@@ -171,16 +171,16 @@ cd
 
 # get start script
 case $UNITS in
-   mmol) curl -o start_nightscout.sh https://raw.githubusercontent.com/jcorbett80/LocalNS/master/start_nightscout.sh; break;;
-   mg) curl -o start_nightscout.sh https://raw.githubusercontent.com/jcorbett80/LocalNS/master/start_nightscout-mg.sh; break;;
+   mmol) curl -o start_nightscout.sh https://raw.githubusercontent.com/Heiner1/LocalNS/master/start_nightscout.sh; break;;
+   mg) curl -o start_nightscout.sh https://raw.githubusercontent.com/Heiner1/LocalNS/master/start_nightscout-mg.sh; break;;
 esac
 
 sudo chmod +rx start_nightscout.sh
 
-git clone https://github.com/jcorbett80/cgm-remote-monitor.git
+git clone https://github.com/Heiner1/cgm-remote-monitor.git
 
 # switching to cgm-remote-monitor directory
-cd /root/cgm-remote-monitor
+cd /cgm-remote-monitor
 
 # switch to dev (latest development version)
 git checkout dev
@@ -191,7 +191,7 @@ git checkout dev
 
 # make autoboot
 cd
-curl -o nightscout https://raw.githubusercontent.com/jcorbett80/LocalNS/master/nightscout
+curl -o nightscout https://raw.githubusercontent.com/Heiner1/LocalNS/master/nightscout
 
 sudo mv nightscout /etc/init.d/nightscout
 sudo chmod +x /etc/init.d/nightscout
