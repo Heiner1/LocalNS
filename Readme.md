@@ -6,9 +6,6 @@ Use this script to setup a complete local running Nightscout instance. This scri
 
 __Tested with:__
 
-- Raspberry Pi Zero (rpi0): Working with Raspian Jessie Lite (Release date: 2016-09-23)
-- Raspberry Pi 1 Model B (rpi1): Working with Raspian Jessie Lite with PIXEL (Release date: 2016-09-23)
-- Raspberry Pi 3 (rpi3): Everything works nicely with or without PIXEL (Release date: 2016-09-23 and 2016-11-25)
 
 __Prerequisites__
 
@@ -17,12 +14,10 @@ __Prerequisites__
 	- Rasbian Jessie with PIXEL: This has a graphical user interface, called PIXEL desktop
 	- Raspbian Jessie Lite: A minimal image based on Debian Jessie. No desktop included.
 
-1. Make sure your Raspberry kernel is up to date 
-   `$ sudo apt-get install rpi-update && sudo rpi-update `
-   and reboot.
+1. ???
 
-2. Configure your Rasberry Pi
-   `$ sudo raspi-config`
+2. Configure your notebook???
+   `$ sudo XXXX
 ```   
 1. Expand Filesystem   ==> Make use of the whole SD-CARD
 2. Change User Password     	
@@ -33,28 +28,22 @@ __Prerequisites__
 A2. Hostname ==> Set your hostname. This will be used for the URL of your Nightscout 
 A4. SSH ==> Enable SSH for remote access
 ```
-3. Tweak your Raspberry Pi.
-See for example: https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-0/rpi.html for information on setting up your Raspberry Pi:
-- Configure WiFi Settings
-- Wifi reliability tweaks [optional]
-- Watchdog [optional]
-- Disable HDMI to conserve power [optional]
-- Configure Bluetooth Low Energy tethering [optional]
+3. 
 
 __Usage:__
 
- 1. open console on your raspi eg `ssh pi@192.168.10.4` default-password `raspberry` and run ns-local-install script for an interactive install:
+ 1. open console on your notebook eg `ssh pi@192.168.10.4` default-password `??????` and run ns-local-install script for an interactive install:
     ```
-    curl -s https://raw.githubusercontent.com/jcorbett80/LocalNS/master/ns-local-install.sh | bash -
+    curl -s https://raw.githubusercontent.com/Heiner1/LocalNS/master/ns-local-install.sh | bash -
 	```
 	
-	relax and drink some :coffee: - script runtime *over 1.5 hour* on clean and fresh raspi 1 or 2, and about 30 minutes on a raspi 3.
+	relax and drink some :coffee: - script runtime *over ???* on notebook???.
 	
 	You can also use a non-interactive install:
 	```
 	mkdir src 
     cd src
-    git clone https://github.com/jcorbett80/LocalNS.git
+    git clone https://github.com/Heiner1/LocalNS.git
 	cd LocalNS
 	```
 	You can then use 
@@ -80,7 +69,7 @@ __Usage:__
 
 __Troubleshooting:__
 
- * nodejs manual start: `pi@raspberrypi:~/cgm-remote-monitor $ start-nightscout.sh` (must be in cgm-remote-monitor directory)
+ * nodejs manual start: user@machine:~/cgm-remote-monitor $ start-nightscout.sh` (must be in cgm-remote-monitor directory)
  * nodejs / nightscout log: check `cat /var/log/openaps/nightscout.log` 
  * mongodb check `cat /var/log/mongodb/mongodb.log` should contain: `[initandlisten] waiting for connections on port 27017`
 
